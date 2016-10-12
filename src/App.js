@@ -5,6 +5,10 @@ import Logo from './Logo'
 
 import './App.css'
 
+/**
+ * Overall page layout, including sidebar, main content etc.
+ */
+
 export default class App extends Component {
   componentWillMount () {
     const { container } = this.props
@@ -52,6 +56,10 @@ export default class App extends Component {
     )
   }
 }
+
+/**
+ * Container for displaying Errors
+ */
 
 function Errors (props) {
   const { errors } = props

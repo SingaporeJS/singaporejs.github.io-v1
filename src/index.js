@@ -16,7 +16,7 @@ if (process.env !== 'production') {
   }
 }
 
-const App = Data(_App)
+const App = Data(_App) // App component needs data props injected.
 
 render(<Index />, document.querySelector('#root'))
 

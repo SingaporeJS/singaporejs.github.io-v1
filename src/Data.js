@@ -2,6 +2,10 @@ import * as Meetup from './meetup'
 import React from 'react'
 import PureMixin from 'react/lib/ReactComponentWithPureRenderMixin'
 
+/**
+ * Wraps supplied Component. Injects shared data as props.
+ */
+
 export default function RequiresData (Component) {
   return function (props) {
     return <DataWrapper {...props} Component={Component} />

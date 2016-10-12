@@ -7,7 +7,7 @@ module.exports = {
   plugins: [
     'babel-plugin-syntax-trailing-function-commas',
     'babel-plugin-transform-class-properties',
-    'babel-plugin-transform-object-rest-spread',
-    'babel-plugin-transform-react-constant-elements'
+    'babel-plugin-transform-object-rest-spread'
+    // 'babel-plugin-transform-react-constant-elements' // disabled temporarily due to bugs. See https://github.com/babel/babel/issues/4106
   ].map(require.resolve)
 }

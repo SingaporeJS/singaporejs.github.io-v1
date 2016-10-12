@@ -5,8 +5,6 @@ const UPCOMING = `${CORS_URL}https://api.meetup.com/singapore-js/events?desc=tru
 const PAST = `${CORS_URL}https://api.meetup.com/singapore-js/events?desc=true&photo-host=secure&page=0&sig_id=12447241&status=past&sig=3a8c0647eff12e80cf68526c34c26aadcb1584cb`
 const ABOUT = `${CORS_URL}https://api.meetup.com/singapore-js?photo-host=secure&sig_id=12447241&sig=f029b5116561c09885a25a723ee71ea0aec72ad4`
 
-window.Meetup = M
-
 const Cache = Object.assign(new Map(), {
   counter: 0,
   save (key, data = {}) {
@@ -112,12 +110,9 @@ function fetchJSON (url, options = {}) {
         })
       })
       .catch(err => {
-        console.log(r)
         return Promise.reject(new Error(`API Error ${r.status}: ${r.statusText}\n${r.url}\n\n${err}`))
       })
     }
-  }, (err) => {
-    return Promise.reject(new Error(`API Error ${r.status}: ${r.statusText}\n${r.url}\n\n${err}`))
   })
 }
 

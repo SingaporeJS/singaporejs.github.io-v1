@@ -77,23 +77,30 @@ function Past (props, context) {
 }
 
 function About (props) {
-  const { about } = props.data
+  const { about, past } = props.data
   return (
     <div className='About page'>
       <div className='photo' style={{backgroundImage: `url(${about.key_photo.photo_link})`}} />
       <h1>SingaporeJS</h1>
-      <a href='http://www.meetup.com/Singapore-JS/' target='_blank'>SingaporeJS on Meetup.com</a>
       <div className='info row'>
-        <div>
-          <h3>Members</h3>
-          {about.members}
-        </div>
         <div>
           <h3>Created</h3>
           <div className='column'>
             <LocaleDate date={about.created} dateonly />
             <RelativeDate date={about.created} />
           </div>
+        </div>
+        <div>
+          <h3>Events</h3>
+          {past.length}
+        </div>
+        <div>
+          <h3>Members</h3>
+          {about.members}
+        </div>
+        <div>
+          <h3>Join</h3>
+          <a href='http://www.meetup.com/Singapore-JS/' target='_blank'>SingaporeJS on Meetup.com</a>
         </div>
       </div>
       <div dangerouslySetInnerHTML={{ __html: about.description }} />

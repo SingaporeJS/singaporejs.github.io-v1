@@ -153,6 +153,26 @@
 }
 
 /**
+ * Info panels across a .page
+ */
+
+.App .page .info {
+  margin: 1em 0;
+  padding-bottom: 2em;
+  border-top: 1px dotted;
+  border-bottom: 1px dotted;
+  justify-content: space-between;
+}
+
+.App .page .info > * {
+  flex: 1;
+}
+
+.App .page .info > * + * {
+  margin-left: 4ch;
+}
+
+/**
  * Page: Past/Upcoming
  */
 
@@ -174,21 +194,6 @@
 
 .App .Event h1:first-of-type > a[target='_blank'] {
   font-size: 1rem;
-}
-
-.App .Event > .info {
-  padding-bottom: 2em;
-  border-top: 1px dotted;
-  border-bottom: 1px dotted;
-  justify-content: space-between;
-}
-
-.App .Event > .info > * {
-  flex: 1;
-}
-
-.App .Event > .info > * + * {
-  margin-left: 4ch;
 }
 
 .App .Event > .description {

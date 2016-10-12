@@ -231,32 +231,58 @@
 }
 
 /**
+ * Page: NotFound/Loading
+ */
+
+.App .NotFound,
+.App .Loading {
+
+}
+
+/**
  * Other Components
  */
+
+/**
+ * Modal Dialogs
+ */
+
+.App dialog {
+  position: fixed;
+  left: 50%;
+  right: auto;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  padding: 1em 2ch;
+  border: 2px solid currentColor;
+}
+
+.App dialog .actions {
+  margin-top: 1rem;
+  justify-content: center;
+}
+
+.App dialog .actions > * + * {
+  margin-left: 2ch;
+  align-items: center;
+}
+
+.App dialog .close {
+  position: absolute;
+  top: 1ch;
+  right: 1ch;
+}
 
 /**
  * Error Modal
  */
 
-.App .Errors {
-  position: fixed;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-  color: var(--color-error);
+.App .Errors,
+.App dialog.error {
   padding: 1em 2ch;
+  color: var(--color-error);
   background: color(var(--color-secondary) tint(5%));
-}
-
-.App .Errors .actions {
-  margin-top: 1rem;
-  justify-content: center;
-}
-
-.App .Errors .actions > * + * {
-  margin-left: 2ch;
-  align-items: center;
 }
 
 .App .Errors .error {
@@ -266,12 +292,3 @@
   white-space: pre-line;
   text-overflow: ellipsis;
 }
-
-.App .Errors .close {
-  position: absolute;
-  top: 1ch;
-  right: 1ch;
-}
-
-
-

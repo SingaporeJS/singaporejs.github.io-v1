@@ -33,7 +33,7 @@ function Index () {
         <Match pattern='/past' component={Data(Past)} />
         <Match pattern='/about' component={Data(About)} />
         <Match pattern='/event/:eventID' component={Data(Event)} />
-        <Miss component={NotFound} />
+        <Miss component={Data(NotFound)} />
       </App>
     </HashRouter>
   )
@@ -103,14 +103,27 @@ function About (props) {
 
 function NotFound () {
   return (
-    <div className='NotFound page'>
-      Not Found
-    </div>
+    <dialog className='NotFound page error' open>
+      <h4>Not Found</h4>
+    </dialog>
+  )
+}
+
+function Loading () {
+  return (
+    <dialog className='Loading page' open>
+      <h4>Loading...</h4>
+    </dialog>
   )
 }
 
 function Event (props) {
   const { eventID } = props.params
+
+  if (!props.data.past.length) {
+    return <Loading />
+  }
+
   const event = (
     props.data.upcoming.find(d => d.id === eventID) ||
     props.data.past.find(d => d.id === eventID)

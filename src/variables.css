@@ -1,0 +1,20 @@
+:root {
+  --color-primary: linen;
+  --color-secondary: rgb(50,51,48);
+  --color-highlight: wheat;
+  --color-error: #F44;
+  --color-warning: #FF931E;
+  --color-success: #7AC943;
+  --color-action: lightsalmon;
+
+  /**
+   * Transition Durations
+   */
+
+  --transition-instant: 50ms; /* just takes the edge off a hard change */
+  --transition-fast: 150ms; /* just noticable */
+  --transition-slow: 500ms; /* fancy */
+
+  --fill: color(var(--color-secondary) tint(10%));
+  --border: 1px solid var(--fill);
+}

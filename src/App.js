@@ -84,7 +84,7 @@ function Errors (props) {
       <div className='row actions'>
         <a className='button' onClick={() => window.location.reload()} title='Refresh'>Turn it on and off again</a>
         <a className='button' onClick={props.onClearErrors} title='Close Dialog'>Ignore</a>
-        <a className='button' target='_blank' title='Open new issue on GitHub' href={`https://github.com/SingaporeJS/discussions/issues/new?title=${errTitle}&body=${errBody}&labels=bug`}>Report Error</a>
+        <a className='button' target='_blank' title='Open new issue on GitHub' href={`https://github.com/SingaporeJS/singaporejs.github.io/issues/new?title=${errTitle}&body=${errBody}&labels=bug`}>Report Error</a>
       </div>
     </dialog>
   )

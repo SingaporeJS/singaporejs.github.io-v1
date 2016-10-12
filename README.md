@@ -12,7 +12,7 @@ Custom site for SingaporeJS Meetup.
 git clone git@github.com:SingaporeJS/singaporejs.github.io.git
 cd singaporejs.github.io
 npm install
-npm start
+npm start # starts a development server on http://localhost:3000
 ```
 
 ### Deploy

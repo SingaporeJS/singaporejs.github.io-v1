@@ -2,6 +2,7 @@
 
 set -e
 
+npm run build
 git diff-index --quiet HEAD -- || (echo 'Please commit all changes before deploying.'; exit 1)
 git branch -D master
 git subtree split --prefix build -b master

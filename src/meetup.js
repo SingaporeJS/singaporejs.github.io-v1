@@ -1,5 +1,3 @@
-import * as M from './meetup'
-
 const CORS_URL = 'https://crossorigin.me/'
 const UPCOMING = `${CORS_URL}https://api.meetup.com/singapore-js/events?desc=true&photo-host=secure&page=0&sig_id=12447241&status=upcoming&sig=d8e7d0d34851c1941f550f43a2b5356c3501e4db`
 const PAST = `${CORS_URL}https://api.meetup.com/singapore-js/events?desc=true&photo-host=secure&page=0&sig_id=12447241&status=past&sig=3a8c0647eff12e80cf68526c34c26aadcb1584cb`

@@ -2,6 +2,8 @@
 
 Custom site for SingaporeJS Meetup.
 
+[![image](https://cloud.githubusercontent.com/assets/43438/19329915/cab3ccec-910d-11e6-83ed-8dcfa24211ba.png)](https://singaporejs.github.io)
+
 ## Instructions
 
 [Bug reports, ideas and pull requests welcome.](https://github.com/SingaporeJS/singaporejs.github.io/issues)

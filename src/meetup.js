@@ -1,7 +1,7 @@
 const CORS_URL = ''
-const UPCOMING = `${CORS_URL}https://api.meetup.com/singapore-js/events?desc=true&photo-host=secure&page=0&sig_id=12447241&status=upcoming&sig=d8e7d0d34851c1941f550f43a2b5356c3501e4db`
-const PAST = `${CORS_URL}https://api.meetup.com/singapore-js/events?desc=true&photo-host=secure&page=0&sig_id=12447241&status=past&sig=3a8c0647eff12e80cf68526c34c26aadcb1584cb`
-const ABOUT = `${CORS_URL}https://api.meetup.com/singapore-js?photo-host=secure&sig_id=12447241&sig=f029b5116561c09885a25a723ee71ea0aec72ad4`
+const UPCOMING = `${CORS_URL}https://api.meetup.com/singapore-js/events`
+const PAST = `${CORS_URL}https://api.meetup.com/singapore-js/events`
+const ABOUT = `${CORS_URL}https://api.meetup.com/singapore-js`
 
 const Cache = Object.assign(new Map(), {
   counter: 0,
